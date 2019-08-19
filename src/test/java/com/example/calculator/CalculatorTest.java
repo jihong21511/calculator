@@ -68,14 +68,14 @@ public class CalculatorTest {
     @Test(expected = ArithmeticException.class)
     public void test_뺄셈(){ // 100% error
         Calculator calc = new Calculator();
-        int result = calc.subtract(1, 1);
+        int result = calc.subtract(30, 10);
         assertEquals("두뺄셈의 차이는 1이어야 합니다.",0, result);
     }
 
     @Test(expected = ArithmeticException.class)
     public void test_곱셈(){ // 100% error
         Calculator calc = new Calculator();
-        int result = calc.multiply(1, 1);
-        assertEquals("두곱값 50",0, result);
+        int result = calc.multiply(30, 30);
+        assertEquals("두곱값 900",0, result);
     }
 }
