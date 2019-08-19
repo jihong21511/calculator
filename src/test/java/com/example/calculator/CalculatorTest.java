@@ -9,7 +9,7 @@ public class CalculatorTest {
     @Test
     public void testAdd() {
         Calculator calc = new Calculator();
-        int result = calc.add(5, 4);
+        int result = calc.add(1, 1);
         System.out.println("result=" + result);
 /*
         if (result == 9) {
@@ -38,7 +38,7 @@ public class CalculatorTest {
     @Test
     public void test_양수덧셈() {
         Calculator calc = new Calculator();
-        int result = calc.add(5, 4);
+        int result = calc.add(1, 1);
         System.out.println("result=" + result);
 
         assertNotEquals(0, result);
@@ -68,14 +68,14 @@ public class CalculatorTest {
     @Test(expected = ArithmeticException.class)
     public void test_뺄셈(){ // 100% error
         Calculator calc = new Calculator();
-        int result = calc.subtract(10, 5);
+        int result = calc.subtract(1, 1);
         assertEquals("두뺄셈의 차이는 1이어야 합니다.",0, result);
     }
 
     @Test(expected = ArithmeticException.class)
     public void test_곱셈(){ // 100% error
         Calculator calc = new Calculator();
-        int result = calc.multiply(10, 5);
+        int result = calc.multiply(1, 1);
         assertEquals("두곱값 50",0, result);
     }
 }
