@@ -64,4 +64,18 @@ public class CalculatorTest {
         int result = calc.division(10, 0);
         assertEquals(0, result);
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void test_뺄셈(){ // 100% error
+        Calculator calc = new Calculator();
+        int result = calc.subtract(10, 5);
+        assertEquals("두뺄셈의 차이는 1이어야 합니다.",0, result);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void test_곱셈(){ // 100% error
+        Calculator calc = new Calculator();
+        int result = calc.multiply(10, 5);
+        assertEquals("두곱값 50",0, result);
+    }
 }
